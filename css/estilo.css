@@ -124,7 +124,6 @@ body{
     align-items: center;
 }
 .baixo-fixo button{
-    background-color: #CBCBCB;
     border-style: none;
     border-radius: 50px;
     width:364px;
@@ -137,6 +136,11 @@ body{
     text-align: center;
     letter-spacing: 0.018em;
     margin: auto;
-
     color: #FFFFFF;
+}
+.prefechado{
+    background-color: #CBCBCB;
+}
+.fechado{
+    background-color:#32B72F;
 }
