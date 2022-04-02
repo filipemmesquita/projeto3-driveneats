@@ -64,7 +64,7 @@ body{
       display: none;
     }
 
-.pedido div{
+.pedido > div{
     width: 182px;
     height: 215px;
     background-color: white;
@@ -72,13 +72,16 @@ body{
     border-radius: 9px;
     padding:13px;
     box-shadow: 0px 0px 10px -4px lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    border-style:solid;
+    border-width: 5px;
+    border-color:white;
 
 
 }
 .selecionado{
-    border-style: solid;
     border-color: #32B72F;
-    border-width: 5px;
 }
 .pedido img{
     width: 144px;
@@ -143,4 +146,12 @@ body{
 }
 .fechado{
     background-color:#32B72F;
+}
+.pedido ion-icon{
+    margin-left:auto;
+    color:#32B72F;
+}
+.oculto{
+    
+    visibility:hidden;
 }
