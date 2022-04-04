@@ -50,7 +50,7 @@ function confirma(){
     document.querySelector(".confirmacao .bebida.preco").innerText="R$"+preçobebida;
     document.querySelector(".confirmacao h2.sobremesa").innerText=sobremesa;
     document.querySelector(".confirmacao .sobremesa.preco").innerText="R$"+preçosobremesa;
-    document.querySelector(".confirmacao .total.preco").innerText=preçototal.toFixed(2);
+    document.querySelector(".confirmacao .total.preco").innerText="R$"+preçototal.toFixed(2);
 
 
     
