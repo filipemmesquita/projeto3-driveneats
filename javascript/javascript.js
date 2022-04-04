@@ -32,6 +32,9 @@ let preçototal = 0;
 let nome = "";
 let endereco ="";
 function confirma(){
+    //checa se os tres estão selecionados e então preenche as informações
+    if((document.querySelector(".prato .selecionado")!==null)&&(document.querySelector(".bebida .selecionado")!==null)&&(document.querySelector(".sobremesa .selecionado")!==null)){
+    
     nome = prompt("Por favor insira seu nome!");
     endereco = prompt("Por favor insira seu endereço!");
     prato= document.querySelector(".prato .selecionado h2").innerText;
@@ -51,7 +54,7 @@ function confirma(){
     document.querySelector(".confirmacao h2.sobremesa").innerText=sobremesa;
     document.querySelector(".confirmacao .sobremesa.preco").innerText="R$"+preçosobremesa;
     document.querySelector(".confirmacao .total.preco").innerText="R$"+preçototal.toFixed(2);
-
+    }
 
     
 }
@@ -67,11 +70,11 @@ function envio(){
      
     document.querySelector(".confirmacao a").target ="_blank";
     document.querySelector(".confirmacao a").href ="https://wa.me/5521981907552?text="+mensagem;
-    //href="https://wa.me/5521981907552?text=testes"
     
 
 }
 function cancelar(){
+    
     document.querySelectorAll(".selecionado").classList.remove("selecionado");
     document.querySelector(".cinza").style.cssText="display:none;";
 }
