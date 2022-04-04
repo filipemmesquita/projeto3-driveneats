@@ -115,6 +115,10 @@ body{
     
     margin:5px;
 }
+.pedido ion-icon{
+    margin-left:auto;
+    color:#32B72F;
+}
 .baixo-fixo{
     width:100%;
     height: 92px;
@@ -147,11 +151,101 @@ body{
 .fechado{
     background-color:#32B72F;
 }
-.pedido ion-icon{
-    margin-left:auto;
-    color:#32B72F;
-}
+
 .oculto{
     
     visibility:hidden;
+}
+.cinza{
+    position:fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+.confirmacao{
+    width:95%;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    color:#FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    padding:20px;
+    justify-content: center;
+
+}
+.confirmacao div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.confirmacao h1{
+    width:100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.confirmacao h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+}
+.confirmacao h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+}
+.preco{
+    margin-left: auto;
+}
+.confirmacao a{
+    text-decoration: none;
+}
+.confirmacao button{
+    border-style: none;
+    border-radius: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.018em;
+    margin-top: 15px;
+    color: #50D074;
+    height: 52px;
+    width:310px;
+}
+.confirmacao > a{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 23px;
+display: flex;
+margin-top: 26px;
+letter-spacing: 0.018em;
+
+color: #FFFFFF;
+
 }

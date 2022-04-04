@@ -20,17 +20,43 @@ function seleciona(clicado, tipo){
 
     }
 }
+
+let mensagem ="";
+let prato=""
+let preçoprato = 0;
+let bebida = "";
+let preçobebida = 0;
+let sobremesa = "";
+let preçosobremesa = 0;
+let preçototal = 0;
+let nome = "";
+let endereco ="";
+function confirma(){
+    nome = prompt("Por favor insira seu nome!");
+    endereco = prompt("Por favor insira seu endereço!");
+    prato= document.querySelector(".prato .selecionado h2").innerText;
+    preçoprato = parseFloat(document.querySelector(".prato .selecionado span").innerText);
+    bebida= document.querySelector(".bebida .selecionado h2").innerText;
+    preçobebida = parseFloat(document.querySelector(".bebida .selecionado span").innerText);
+    sobremesa= document.querySelector(".sobremesa .selecionado h2").innerText;
+    preçosobremesa = parseFloat(document.querySelector(".sobremesa .selecionado span").innerText);
+    preçototal= preçobebida+preçoprato+preçosobremesa;
+
+//este bloco preenche a tela de confirmação e a faz aparecer
+    document.querySelector(".cinza").style.cssText="display:flex;";
+    document.querySelector(".confirmacao h2.prato").innerText=prato;
+    document.querySelector(".confirmacao .prato.preco").innerText="R$"+preçoprato;
+    document.querySelector(".confirmacao h2.bebida").innerText=bebida;
+    document.querySelector(".confirmacao .bebida.preco").innerText="R$"+preçobebida;
+    document.querySelector(".confirmacao h2.sobremesa").innerText=sobremesa;
+    document.querySelector(".confirmacao .sobremesa.preco").innerText="R$"+preçosobremesa;
+    document.querySelector(".confirmacao .total.preco").innerText=preçototal.toFixed(2);
+
+
+    
+}
 function envio(){
-    let nome = prompt("Por favor insira seu nome!");
-    let endereco = prompt("Por favor insira seu endereço!");
-    let prato= document.querySelector(".prato .selecionado h2").innerText;
-    let preçoprato = parseFloat(document.querySelector(".prato .selecionado span").innerText);
-    let bebida= document.querySelector(".bebida .selecionado h2").innerText;
-    let preçobebida = parseFloat(document.querySelector(".bebida .selecionado span").innerText);
-    let sobremesa= document.querySelector(".sobremesa .selecionado h2").innerText;
-    let preçosobremesa = parseFloat(document.querySelector(".sobremesa .selecionado span").innerText);
-    let preçototal= preçobebida+preçoprato+preçosobremesa;
-    let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+    mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
@@ -38,8 +64,14 @@ function envio(){
 
     Nome: ${nome}
     Endereço: ${endereco}`)
-    document.querySelector(".baixo-fixo a").href ="https://wa.me/5521981907552?text="+mensagem;
+     
+    document.querySelector(".confirmacao a").target ="_blank";
+    document.querySelector(".confirmacao a").href ="https://wa.me/5521981907552?text="+mensagem;
     //href="https://wa.me/5521981907552?text=testes"
     
-    
+
+}
+function cancelar(){
+    document.querySelectorAll(".selecionado").classList.remove("selecionado");
+    document.querySelector(".cinza").style.cssText="display:none;";
 }
